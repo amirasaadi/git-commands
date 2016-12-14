@@ -1,0 +1,29 @@
+git checkout index.html
+git reset --hard HEAD
+git push origin [branchname] #send files and changes to repo
+git diff branchname1 branchname2
+git diff --name-only branchname1 branchname2
+git checkout branchname		#switch from current branch to branchname
+git merge [branchname]		#merge branchname with current branch(eg : master)
+git branch -d branchname	#delete branchname locally
+git push origin --delete branchname	#delete branch name on the github
+git tag		#show the tag projects
+git tag -a RELEASENUMBERORNAME
+git show tAGnAME	#show information about the tagger and etc
+git push --tags		#update the tags in github
+git checkout rELEASEnAME	#goto the time of the rELEASEnAME
+git init # to create git
+git add fILEnAME #put it on staging area fILEnAME 
+git commit # to commit
+git log # to see commit has been created
+git status #
+git add . #add every thing to staging area
+git add *.html # add every html files to staging area
+touch .gitignore #create .gitignore file (for ignoring to staging area) after that you should open .gitignore file and type for example *.log \
+	and it ignore every log files to be added to staging area
+git branch [branchname] #will create a branch
+git commit -a -m ["message"] #commiting and igonring the add command
+git mergetool 
+git fetch origin #keep uptodate from repo
+git pull origin #fetch and merge from repo
+
