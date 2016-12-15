@@ -26,4 +26,15 @@ git commit -a -m ["message"] #commiting and igonring the add command
 git mergetool 
 git fetch origin #keep uptodate from repo
 git pull origin #fetch and merge from repo
-
+git config --global user.name "Your Name"	# to config your name
+git config --global user.email "your_email@whatever.com"	# to config your email
+git log --pretty=oneline # tell you the log in one line
+git log --pretty=oneline --max-count=2
+git log --pretty=oneline --since='5 minutes ago'
+git log --pretty=oneline --until='5 minutes ago'
+git log --pretty=oneline --author=<your name>
+git log --pretty=oneline --all
+git config --global core.editor emacs # to set the default editor
+git config --list # to see all config
+git config [config.name] #to see spical config eg:  user.name
+git help [verb] # shows the help for verb
