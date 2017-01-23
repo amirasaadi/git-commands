@@ -1,4 +1,5 @@
 *No difference between '' and ""
+*when you use ssh rather than https it makes it easier because it doesn't need username and 	password
 
 >git config --global user.name "Your Name"	# to config your name
 >git config --global user.email "your_email@whatever.com"	# to config your email
@@ -73,6 +74,7 @@
 #create a backup on remote 
 #origin is name of remote and is equal to our url
 >git remote add origin [url]
+>git remote -v
 
 
 >git push origin [branchname] #send files and changes to repo
