@@ -1,15 +1,37 @@
+git config --global user.name "Your Name"	# to config your name
+git config --global user.email "your_email@whatever.com"	# to config your email
+git config --global color.ui "auto"
+
+#mac/linux 
+git config --global "nano -w"
+git config --global "subl -n -w"
+
+#windows
+git config --global core.editor "'c:/program files (x86)/sublime text 3/sublime_text.exe' -w"
+git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"
+git config --global core.editor "'c:/program files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+
+#check setting
+git config --list
+
+git config --global core.editor emacs # to set the default editor
+git config --list # to see all config
+git config [config.name] #to see spical config eg:  user.name
+
 git checkout index.html
 git reset --hard HEAD
 git push origin [branchname] #send files and changes to repo
 git diff branchname1 branchname2
 git diff --name-only branchname1 branchname2
 git checkout branchname		#switch from current branch to branchname
+git checkout -b [branchname]	#it will create branchname after that checkout to that branch
 git merge [branchname]		#merge branchname with current branch(eg : master)
 git branch -d branchname	#delete branchname locally
 git push origin --delete branchname	#delete branch name on the github
 git tag		#show the tag projects
 git tag -a RELEASENUMBERORNAME
 git show tAGnAME	#show information about the tagger and etc
+git show [id]		#show the difrencces betwwen given commit and its parent
 git push --tags		#update the tags in github
 git checkout rELEASEnAME	#goto the time of the rELEASEnAME
 git init # to create git
@@ -22,19 +44,23 @@ git add *.html # add every html files to staging area
 touch .gitignore #create .gitignore file (for ignoring to staging area) after that you should open .gitignore file and type for example *.log \
 	and it ignore every log files to be added to staging area
 git branch [branchname] #will create a branch
+git branch # shows the branches 
+-----how to merge ----
+git checkout master
+git merge master [branchname]
+fill the meesage of merging
+-----
 git commit -a -m ["message"] #commiting and igonring the add command
 git mergetool 
 git fetch origin #keep uptodate from repo
 git pull origin #fetch and merge from repo
-git config --global user.name "Your Name"	# to config your name
-git config --global user.email "your_email@whatever.com"	# to config your email
+
 git log --pretty=oneline # tell you the log in one line
 git log --pretty=oneline --max-count=2
 git log --pretty=oneline --since='5 minutes ago'
 git log --pretty=oneline --until='5 minutes ago'
 git log --pretty=oneline --author=<your name>
 git log --pretty=oneline --all
-git config --global core.editor emacs # to set the default editor
-git config --list # to see all config
-git config [config.name] #to see spical config eg:  user.name
+git log --graph --oneline [branchname1] [branchname2] #show you the branches graphically in one line
+
 git help [verb] # shows the help for verb
