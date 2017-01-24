@@ -1,5 +1,6 @@
 *No difference between '' and ""
 *when you use ssh rather than https it makes it easier because it doesn't need username and 	password
+*pull request is merging on github
 
 >git config --global user.name "Your Name"	# to config your name
 >git config --global user.email "your_email@whatever.com"	# to config your email
@@ -40,13 +41,15 @@
 #to see history of commits
 >git log # to see commit has been created
 >git log --oneline	#to show commits just in oneline
+>git log --oneline --all	#shows all commit even on other branches
+>git log --oneline --all	--decorate	--graph 	#show it very nice
 >git log --pretty=oneline # tell you the log in one line
 >git log --pretty=oneline --max-count=2
 >git log --pretty=oneline --since='5 minutes ago'
 >git log --pretty=oneline --until='5 minutes ago'
 >git log --pretty=oneline --author=<your name>
 >git log --pretty=oneline --all
->git log --graph --oneline [branchname1] [branchname2] #show you the branches graphically in one line
+>git log --graph --oneline [branchname1] [branchname2] #show you the branches graphically in 	one line
 
 #shows the diffrence between currnet state and last state
 >git diff
@@ -61,11 +64,11 @@
 #return back you to last one
 >git checkout HEAD~1 [File name]
 >git checkout [commit ID]
->git chekout master		#it returns back to last state of whole directory
+>git checkout master		#it returns back to last state of whole directory
 >git checkout master [file name] 	#it returns back to to last state of file that you give
 >git checkout index.html
 >git checkout branchname		#switch from current branch to branchname
->git checkout -b [branchname]	#it will create branchname after that checkout to that branch
+>git checkout -b [branchname]	# 1 it will create branchname after 2 that checkout to that 	branch
 >git checkout rELEASEnAME	#goto the time of the rELEASEnAME 
 
 >git reset HEAD [FILENAME]	#unstage the file
@@ -76,10 +79,18 @@
 >git remote add origin [url]
 >git remote -v
 
-
 >git push origin [branchname] #send files and changes to repo
->git merge [branchname]		#merge branchname with current branch(eg : master)
+>git pull origin [branchname]	#most of the time branch name is master it update local repo
+
+#work flows
+>git branch [branchname] #will create a branch
+>git branch # shows the branches
+>git branch -a #shows all the branches even on the remote
 >git branch -d branchname	#delete branchname locally
+
+
+>git merge [branchname]		#merge branchname with current branch(eg : master)
+
 >git push origin --delete branchname	#delete branch name on the github
 >git tag		#show the tag projects
 >git tag -a RELEASENUMBERORNAME
@@ -91,8 +102,7 @@
 touch .gitignore #create .gitignore file (for ignoring to staging area) after that you should open .gitignore file and type for example *.log \
 	and it ignore every log files to be added to staging area or just simply enter the name of file
 	
-git branch [branchname] #will create a branch
-git branch # shows the branches 
+
 -----how to merge ----
 git checkout master
 git merge master [branchname]
